@@ -31,6 +31,19 @@ field in [`FeeConfig`](#feeconfig).
 
 ---
 
+## ContactRecord
+
+A record of a paid contact attempt from a scout to a player, stored by the
+`scout_access` contract after successful payment of the configured contact fee.
+A `ContactRecord` links the paying scout, the contacted player, and the paid
+fee amount, and enables the platform to enforce repeated-contact and contact
+history checks.
+
+- Relevant functions: `pay_to_contact`, `get_contact_record`, `has_contacted`
+  — see [CONTRACT_REFERENCE.md](CONTRACT_REFERENCE.md#scout_access).
+
+---
+
 ## FeeConfig
 
 The primary configuration struct for the `scout_access` contract. Controls all
