@@ -435,6 +435,7 @@ stellar contract invoke --id $REGISTRATION_CONTRACT_ID \
 
 Batch-fetch lightweight player summaries for up to 20 IDs in a single call.
 Missing IDs are silently skipped (partial hits are returned without error).
+For cost rationale behind batch-size caps, see the batch-operation entries in [`ci/cpu-cost-budget.md`](../ci/cpu-cost-budget.md), including `scout_access.batch_contact_players`.
 
 | | |
 |---|---|
