@@ -93,6 +93,7 @@ jobs:
           shellcheck scripts/migrate-contract.sh
           shellcheck scripts/replay-state.sh
           shellcheck scripts/migrate-contract-smoke-test.sh
+          shellcheck scripts/git-hooks/pre-push
           shellcheck testnet/seed.sh
       - name: Docs completeness check
         run: bash scripts/check-docs.sh
