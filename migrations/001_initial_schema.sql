@@ -49,9 +49,16 @@ CREATE TABLE IF NOT EXISTS scouts (
     scout_id        BIGINT PRIMARY KEY,
     wallet          VARCHAR(56)  NOT NULL UNIQUE,
     region          VARCHAR(128) NOT NULL,
+    verified        BOOLEAN      NOT NULL DEFAULT FALSE, -- mirrors registration.get_scout(...).verified
     registered_at   BIGINT       NOT NULL,
     created_db_at   TIMESTAMPTZ  NOT NULL DEFAULT NOW()
 );
+
+-- Companion migration for already-deployed databases
+-- (CREATE TABLE IF NOT EXISTS does not add columns to an existing table):
+--
+--   ALTER TABLE scouts
+--     ADD COLUMN IF NOT EXISTS verified BOOLEAN NOT NULL DEFAULT FALSE;
 
 CREATE INDEX IF NOT EXISTS idx_scouts_wallet ON scouts (wallet);
 
