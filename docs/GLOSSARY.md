@@ -86,6 +86,30 @@ Examples: "Scored 5 goals in Local Cup", "Top speed clocked at 32 km/h".
 
 ---
 
+## Milestone Dispute
+
+A formal on-chain challenge raised by a player against a specific milestone
+that was approved for their profile. Only the affected player may file a
+dispute — validators and scouts have no standing to do so.
+
+A dispute record carries two outcome fields that are set when the platform
+admin resolves it:
+
+| Field | Values | Meaning |
+|---|---|---|
+| `resolved` | `false` / `true` | Whether the admin has acted on the dispute |
+| `upheld` | `false` / `true` | `true` if the admin agreed the milestone was invalid; `false` if the milestone stands |
+
+When a dispute is upheld the admin is expected to revoke or correct the
+offending milestone through the standard validator-management flow; the
+dispute mechanism itself only records the outcome on-chain.
+
+- Relevant functions: `dispute_milestone`, `resolve_dispute`, `get_dispute`,
+  `has_dispute` — see
+  [CONTRACT_REFERENCE.md](CONTRACT_REFERENCE.md#verification).
+
+---
+
 ## Player
 
 A registered footballer with an on-chain identity. A player is identified by a
