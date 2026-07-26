@@ -4,7 +4,7 @@ Complete public API reference for all four ScoutChain Soroban smart contracts.
 Every `pub fn` in every `#[contractimpl]` block is documented here.
 
 > [!NOTE]
-> **Last verified:** 2026-07-25 — synced against `cargo test` + `scripts/check-docs.sh` passing at commit `scout-off/scout-off-contracts@main` (PRs #917, #916, #915 documentation updates merged).
+> **Last verified:** 2026-07-26 — manually cross-checked against the contract source and the H2/Table of Contents audit in this documentation-sync PR.
 
 ---
 
@@ -22,7 +22,6 @@ That keeps the command copy-paste-runnable in a standard `bash`/`zsh` shell.
 - [Error Codes](#error-codes)
 - [Events](#events)
 - [Design Discussion: Check-Ordering Follow-ups](#design-discussion-check-ordering-follow-ups)
-- [Glossary](GLOSSARY.md)
 
 ---
 

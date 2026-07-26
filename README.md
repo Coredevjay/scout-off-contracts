@@ -544,7 +544,7 @@ Secondary features (fractionalized sponsorship, oracle integrations, advanced fi
 - [x] Network config files (testnet + mainnet)
 - [x] Cross-repo `ai.md` integration guide
 - [ ] Scout subscription and pay-to-contact flow (backend + frontend)
-- [ ] Trial offer logging UI and Level 3 advancement (backend + frontend)
+- [ ] Trial offer logging UI and Level 3 advancement (backend + frontend) — contract-side trial-offer escrow/confirmation is already shipped; remaining work is the backend/frontend UI layer.
 - [ ] Decentralized oracle integration for physical stats
 - [ ] Fractionalized Player Token sponsorship model
 - [ ] Mobile-first Flutter frontend
