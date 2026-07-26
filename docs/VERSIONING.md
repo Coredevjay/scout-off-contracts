@@ -119,6 +119,10 @@ When adding new entries to the Version History table:
 - **Summary**: Provide a concise summary of changes, explicitly calling out breaking changes if `MAJOR`.
 - **Cross-reference**: Every entry must mirror the corresponding entry in [CHANGELOG.md](CHANGELOG.md) — keep both files in sync.
 
+> **Current enforcement gap:** Keeping this Version History table current is
+> currently a convention-only process that relies on contributor discipline; no
+> CI check enforces that MAJOR or MINOR version changes add a corresponding row.
+
 | Version | Date | Type | Summary |
 |---------|------|------|---------|
 | v0.1.0 (all) | 2025 | MINOR | Initial release — all four contracts with full test coverage |

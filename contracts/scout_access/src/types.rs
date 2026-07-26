@@ -16,9 +16,13 @@ pub enum SubscriptionTier {
 #[contracttype]
 #[derive(Clone, Debug)]
 pub struct Subscription {
+    /// Scout wallet that owns this subscription.
     pub scout: Address,
+    /// Active subscription tier for authorization and fee checks.
     pub tier: SubscriptionTier,
+    /// Ledger timestamp when the subscription expires, in Unix seconds.
     pub expires_at: u64,
+    /// Ledger timestamp when the subscription started, in Unix seconds.
     pub subscribed_at: u64,
 }
 
@@ -26,7 +30,9 @@ pub struct Subscription {
 #[contracttype]
 #[derive(Clone, Debug)]
 pub struct ContactRecord {
+    /// Player identifier that the scout contacted.
     pub player_id: u64,
+    /// Scout wallet that initiated the contact.
     pub scout: Address,
     /// Ledger timestamp at the moment the contact was recorded
     pub contacted_at: u64,
@@ -36,10 +42,13 @@ pub struct ContactRecord {
 #[contracttype]
 #[derive(Clone, Debug)]
 pub struct TrialOffer {
+    /// Player identifier receiving the trial offer.
     pub player_id: u64,
+    /// Scout wallet that logged the trial offer.
     pub scout: Address,
     /// IPFS/Arweave CID of the offer details document
     pub details_hash: String,
+    /// Ledger timestamp when the trial offer was logged, in Unix seconds.
     pub logged_at: u64,
 }
 
@@ -61,7 +70,9 @@ pub struct ProContactPeriod {
 #[contracttype]
 #[derive(Clone, Debug)]
 pub struct TrialEscrow {
+    /// Escrowed trial-offer amount in stroops.
     pub amount: i128,
+    /// Ledger timestamp after which the escrow may be expired, in Unix seconds.
     pub expires_at: u64,
 }
 

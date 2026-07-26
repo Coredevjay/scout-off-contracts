@@ -158,6 +158,11 @@ ledger timestamp. This applies to fields such as `registered_at`, `updated_at`,
 recorded alongside an event. `sub_duration_secs` is a duration in seconds, not
 an absolute Unix timestamp.
 
+Example: a `ProgressEntry` might record `updated_at: 1_735_689_600` and
+`ledger_sequence: 12_345_678` for the same level change. The first value is a
+Unix-second wall-clock time; the second is the Soroban ledger number that
+included the change.
+
 ---
 
 ## Trial Offer
