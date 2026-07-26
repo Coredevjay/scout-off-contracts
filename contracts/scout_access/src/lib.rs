@@ -679,6 +679,7 @@ impl ScoutAccessContract {
     ) -> Result<u32, ScoutAccessError> {
         Self::bump_instance_ttl(&env);
         Self::require_not_paused(&env)?;
+        Self::require_initialized(&env)?;
         scout.require_auth();
 
         validate_cid(&details_hash).map_err(|_| ScoutAccessError::InvalidInput)?;
